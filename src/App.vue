@@ -164,7 +164,9 @@ export default {
       //fetch weather
       try {
         const response = await axiosInstance.get(`/weather?q=${this.citySearch}&appid=cde3993cbe012d67a44a7518e13b172c&units=metric`);
+        console.log('response', response)
         const data = await response.data;
+        console.log('data', data)
 
         if(response.status === 200){
           this.isLoading = false;
